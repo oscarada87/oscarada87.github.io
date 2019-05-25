@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Design Patterns,OCP Principle,">
+  <meta name="keywords" content="Design Pattern,OCP Principle,">
 
 
 
@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="Open-Closed Principle 開放-封閉法則 ¶核心概念 ⚡️Open for extension, but closed for modification.⚡️ 翻譯成中文↓ ⚡️開放擴充，但避免不必要的修改。⚡️  還是看不懂嗎?那我來講個故事。">
-<meta name="keywords" content="Design Patterns,OCP Principle">
+<meta name="description" content="¶Open-Closed Principle 開放-封閉法則 ¶核心概念 ⚡️Open for extension, but closed for modification.⚡️ 翻譯成中文↓ ⚡️開放擴充，但避免不必要的修改。⚡️  還是看不懂嗎?那我來講個故事。">
+<meta name="keywords" content="Design Pattern,OCP Principle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Design Patterns : Open-Closed Principle">
 <meta property="og:url" content="https://oscarada87.github.io/2019/05/24/Design-Patterns-Open-Closed-Principle/index.html">
 <meta property="og:site_name" content="Oscar&#39;s Tech Blog">
-<meta property="og:description" content="Open-Closed Principle 開放-封閉法則 ¶核心概念 ⚡️Open for extension, but closed for modification.⚡️ 翻譯成中文↓ ⚡️開放擴充，但避免不必要的修改。⚡️  還是看不懂嗎?那我來講個故事。">
+<meta property="og:description" content="¶Open-Closed Principle 開放-封閉法則 ¶核心概念 ⚡️Open for extension, but closed for modification.⚡️ 翻譯成中文↓ ⚡️開放擴充，但避免不必要的修改。⚡️  還是看不懂嗎?那我來講個故事。">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="http://i.imgur.com/Es8RWvb.jpg">
-<meta property="og:updated_time" content="2019-05-24T18:27:26.759Z">
+<meta property="og:updated_time" content="2019-05-25T03:58:08.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Design Patterns : Open-Closed Principle">
-<meta name="twitter:description" content="Open-Closed Principle 開放-封閉法則 ¶核心概念 ⚡️Open for extension, but closed for modification.⚡️ 翻譯成中文↓ ⚡️開放擴充，但避免不必要的修改。⚡️  還是看不懂嗎?那我來講個故事。">
+<meta name="twitter:description" content="¶Open-Closed Principle 開放-封閉法則 ¶核心概念 ⚡️Open for extension, but closed for modification.⚡️ 翻譯成中文↓ ⚡️開放擴充，但避免不必要的修改。⚡️  還是看不懂嗎?那我來講個故事。">
 <meta name="twitter:image" content="http://i.imgur.com/Es8RWvb.jpg">
 
 
@@ -314,6 +314,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Design-Pattern/" itemprop="url" rel="index">
+                    <span itemprop="name">Design Pattern</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -351,8 +373,8 @@
       
 
       
-        <h1>Open-Closed Principle 開放-封閉法則</h1>
-<h2 id="核心概念"><a class="header-anchor" href="#核心概念">¶</a>核心概念</h2>
+        <h2 id="open-closed-principle-開放-封閉法則"><a class="header-anchor" href="#open-closed-principle-開放-封閉法則">¶</a>Open-Closed Principle 開放-封閉法則</h2>
+<h4 id="核心概念"><a class="header-anchor" href="#核心概念">¶</a>核心概念</h4>
 <p><strong>⚡️Open for extension, but closed for modification.⚡️</strong></p>
 <p>翻譯成中文↓</p>
 <p><strong>⚡️開放擴充，但避免不必要的修改。⚡️</strong></p>
@@ -360,7 +382,7 @@
 還是看不懂嗎?那我來講個故事。</p>
 <a id="more"></a>
 <p>假設今天教授要小明寫一個計算學期末總成績的程式，接著小明花了 1 天就用 python 寫出來了，教授覺得你很棒。過了1年後，教授改變了學期總成績的算法，原本的程式就不能用了，這時候你會選擇改程式還是重寫呢?</p>
-<h2 id="python範例程式碼"><a class="header-anchor" href="#python範例程式碼">¶</a>Python範例程式碼</h2>
+<h4 id="python範例程式碼"><a class="header-anchor" href="#python範例程式碼">¶</a>Python範例程式碼</h4>
 <p>假設每學期都一定會有 4 個成績，期中考、期末考、作業、平時成績。<br>
 107 年教授以下表作為學期總成績計算。</p>
 <table>
@@ -427,7 +449,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> abc</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(abc.ABC)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, midterm, finalExam, assignment, usual)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.midterm = midterm</span><br><span class="line">        self.finalExam = finalExam</span><br><span class="line">        self.assignment = assignment</span><br><span class="line">        self.usual = usual</span><br><span class="line">    <span class="comment"># 建立抽象function- finalScore</span></span><br><span class="line"><span class="meta">    @abc.abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">finalScore</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">NotImplemented</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 去年學生</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student107</span><span class="params">(Student)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, midterm, finalExam, assignment, usual)</span>:</span></span><br><span class="line">        <span class="comment"># 呼叫父類別的init函式</span></span><br><span class="line">        super(Student107, self).__init__(name, midterm, finalExam, assignment, usual)</span><br><span class="line">    <span class="comment"># 實作finalScore</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">finalScore</span><span class="params">(self)</span>:</span></span><br><span class="line">        score = self.midterm * <span class="number">0.25</span> + self.finalExam * <span class="number">0.35</span> + self.assignment * <span class="number">0.3</span> + self.usual * <span class="number">0.1</span></span><br><span class="line">        print(<span class="string">'&#123;&#125;\'s final score: &#123;&#125;'</span>.format(self.name, score))</span><br><span class="line">        <span class="keyword">return</span> score</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 測試     </span></span><br><span class="line"><span class="comment"># Ben 100 100 100 100    學期總成績應為: 100</span></span><br><span class="line"><span class="comment"># XioMing 50 75 32 85    學期總成績應為: 56.85</span></span><br><span class="line"><span class="comment"># Peter 46 89 32 90      學期總成績應為: 61.25</span></span><br><span class="line"></span><br><span class="line">Ben = Student107(<span class="string">'Ben'</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>)</span><br><span class="line">XioMing = Student107(<span class="string">'XioMing'</span>, <span class="number">50</span>, <span class="number">75</span>, <span class="number">32</span>, <span class="number">85</span>)</span><br><span class="line">Peter = Student107(<span class="string">'Peter'</span>, <span class="number">46</span>, <span class="number">89</span>, <span class="number">32</span>, <span class="number">90</span>)</span><br><span class="line">print(<span class="string">'107 Students:'</span>)</span><br><span class="line">Ben.finalScore()</span><br><span class="line">XioMing.finalScore()</span><br><span class="line">Peter.finalScore()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 今年學生</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student108</span><span class="params">(Student)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, midterm, finalExam, assignment, usual, addPoint)</span>:</span></span><br><span class="line">        <span class="comment"># 呼叫父類別的init函式</span></span><br><span class="line">        super(Student108, self).__init__(name, midterm, finalExam, assignment, usual)</span><br><span class="line">        <span class="comment"># 新增 加分 這個新的屬性</span></span><br><span class="line">        self.addPoint = addPoint</span><br><span class="line">    <span class="comment"># 實作finalScore</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">finalScore</span><span class="params">(self)</span>:</span></span><br><span class="line">        score = self.midterm * <span class="number">0.3</span> + self.finalExam * <span class="number">0.3</span> + self.assignment * <span class="number">0.2</span> + self.usual * <span class="number">0.2</span> + self.addPoint</span><br><span class="line">        print(<span class="string">'&#123;&#125;\'s final score: &#123;&#125;'</span>.format(self.name, score))</span><br><span class="line">        <span class="keyword">return</span> score</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 測試</span></span><br><span class="line"><span class="comment"># Brian 100 100 100 100 3 學期總成績應為: 103</span></span><br><span class="line"><span class="comment"># XioMing 50 75 32 85 5   學期總成績應為: 65.9</span></span><br><span class="line"><span class="comment"># Apple 46 89 32 90 0     學期總成績應為: 64.9</span></span><br><span class="line"></span><br><span class="line">Brian = Student108(<span class="string">'Brian'</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">3</span>)</span><br><span class="line">XioMing = Student108(<span class="string">'XioMing'</span>, <span class="number">50</span>, <span class="number">75</span>, <span class="number">32</span>, <span class="number">85</span>, <span class="number">5</span>)</span><br><span class="line">Apple = Student108(<span class="string">'Apple'</span>, <span class="number">46</span>, <span class="number">89</span>, <span class="number">32</span>, <span class="number">90</span>, <span class="number">0</span>)</span><br><span class="line">print(<span class="string">'108 Students:'</span>)</span><br><span class="line">Brian.finalScore()</span><br><span class="line">XioMing.finalScore()</span><br><span class="line">Apple.finalScore()</span><br></pre></td></tr></table></figure>
 <p>以後每年成績算法不同只要新增一個class繼承Student再覆寫學期總成績算法就行了，小明也靠著加分過了那堂課!</p>
 <p>🎉可喜可賀🎉可喜可賀🎉</p>
-<h2 id="參考資料"><a class="header-anchor" href="#參考資料">¶</a>參考資料</h2>
+<h4 id="參考資料"><a class="header-anchor" href="#參考資料">¶</a>參考資料</h4>
 <ol>
 <li><a href="http://blog.seat.org.tw/2009/03/ocp.html" target="_blank" rel="noopener">談談OCP - 輕鬆談軟工 - 台灣軟體工程學會</a></li>
 <li><a href="http://teddy-chen-tw.blogspot.com/2011/12/2.html" target="_blank" rel="noopener">搞笑談軟工: 亂談軟體設計（2）：Open-Closed Principle</a></li>
@@ -449,7 +471,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Design-Patterns/" rel="tag"># Design Patterns</a>
+            <a href="/tags/Design-Pattern/" rel="tag"># Design Pattern</a>
           
             <a href="/tags/OCP-Principle/" rel="tag"># OCP Principle</a>
           
@@ -460,6 +482,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/25/用-Python-打造自己的-Telegram-Bot/" rel="prev" title="用 Python 打造自己的 Telegram Bot!">
+                用 Python 打造自己的 Telegram Bot! <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -545,12 +583,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分類</span>
+                </a>
+              </div>
             
 
             
@@ -558,7 +605,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -607,7 +654,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Open-Closed Principle 開放-封閉法則</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#核心概念"><span class="nav-number">1.1.</span> <span class="nav-text">¶核心概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python範例程式碼"><span class="nav-number">1.2.</span> <span class="nav-text">¶Python範例程式碼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考資料"><span class="nav-number">1.3.</span> <span class="nav-text">¶參考資料</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#open-closed-principle-開放-封閉法則"><span class="nav-number">1.</span> <span class="nav-text">¶Open-Closed Principle 開放-封閉法則</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#核心概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">¶核心概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#python範例程式碼"><span class="nav-number">1.0.2.</span> <span class="nav-text">¶Python範例程式碼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#參考資料"><span class="nav-number">1.0.3.</span> <span class="nav-text">¶參考資料</span></a></li></ol></li></ol></div>
             
 
           </div>
