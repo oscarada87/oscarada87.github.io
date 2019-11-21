@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Oscar">
+  <meta name="keywords" content="Design Pattern,Refactor,">
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="菜鳥工程師的走跳人生">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Oscar&#39;s Tech Blog">
-<meta property="og:url" content="https://oscarada87.github.io/categories/Design-Pattern/index.html">
+<meta name="description" content="Refactor 之路 此系列文章是為了記錄 Refactor 公司遺留程式碼，一方面以後可以回過頭來檢討，一方面可以讓更多人一起討論。 主要會寫一些 design choice 以及架構設計的 UML 圖。 ¶第三方API封裝 Third Party API Encapsulation  Service 主要負責三件事  input validation (輸入驗證) validation 寫在">
+<meta name="keywords" content="Design Pattern,Refactor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第三方API封裝 Third Party API Encapsulation">
+<meta property="og:url" content="https://oscarada87.github.io/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/index.html">
 <meta property="og:site_name" content="Oscar&#39;s Tech Blog">
-<meta property="og:description" content="菜鳥工程師的走跳人生">
+<meta property="og:description" content="Refactor 之路 此系列文章是為了記錄 Refactor 公司遺留程式碼，一方面以後可以回過頭來檢討，一方面可以讓更多人一起討論。 主要會寫一些 design choice 以及架構設計的 UML 圖。 ¶第三方API封裝 Third Party API Encapsulation  Service 主要負責三件事  input validation (輸入驗證) validation 寫在">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://user-images.githubusercontent.com/20165488/69312439-e6b5e080-0c69-11ea-9a6a-23f82aac7c3c.png">
+<meta property="og:updated_time" content="2019-11-21T17:36:35.887Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oscar&#39;s Tech Blog">
-<meta name="twitter:description" content="菜鳥工程師的走跳人生">
+<meta name="twitter:title" content="第三方API封裝 Third Party API Encapsulation">
+<meta name="twitter:description" content="Refactor 之路 此系列文章是為了記錄 Refactor 公司遺留程式碼，一方面以後可以回過頭來檢討，一方面可以讓更多人一起討論。 主要會寫一些 design choice 以及架構設計的 UML 圖。 ¶第三方API封裝 Third Party API Encapsulation  Service 主要負責三件事  input validation (輸入驗證) validation 寫在">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/20165488/69312439-e6b5e080-0c69-11ea-9a6a-23f82aac7c3c.png">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://oscarada87.github.io/categories/Design-Pattern/">
+  <link rel="canonical" href="https://oscarada87.github.io/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/">
 
 
 
 
 
-  <title>分類: Design Pattern | Oscar's Tech Blog</title>
+  <title>第三方API封裝 Third Party API Encapsulation | Oscar's Tech Blog</title>
   
 
 
@@ -152,7 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -256,79 +260,206 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Design Pattern<small>分類</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Oscar Chiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Oscar's Tech Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/" itemprop="url">
-              
-                <span itemprop="name">第三方API封裝 Third Party API Encapsulation</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">第三方API封裝 Third Party API Encapsulation</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-22T01:29:55+08:00" content="2019-11-22">
-          11-22
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-11-22T01:29:55+08:00">
+                2019-11-22
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Design-Pattern/" itemprop="url" rel="index">
+                    <span itemprop="name">Design Pattern</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Design-Pattern/Refactor/" itemprop="url" rel="index">
+                    <span itemprop="name">Refactor</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/24/Design-Patterns-Open-Closed-Principle/" itemprop="url">
-              
-                <span itemprop="name">Design Patterns : Open-Closed Principle</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-24T22:33:21+08:00" content="2019-05-24">
-          05-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h1>Refactor 之路</h1>
+<p>此系列文章是為了記錄 Refactor 公司遺留程式碼，一方面以後可以回過頭來檢討，一方面可以讓更多人一起討論。<br>
+主要會寫一些 design choice 以及架構設計的 UML 圖。</p>
+<h3 id="第三方api封裝-third-party-api-encapsulation"><a class="header-anchor" href="#第三方api封裝-third-party-api-encapsulation">¶</a>第三方API封裝 Third Party API Encapsulation</h3>
+<p><img src="https://user-images.githubusercontent.com/20165488/69312439-e6b5e080-0c69-11ea-9a6a-23f82aac7c3c.png" alt="Service Diagram"></p>
+<p>Service 主要負責三件事</p>
+<ul>
+<li>input validation (輸入驗證)<br>
+validation 寫在 service 的好處是，如果未來 validation 有更動，就不需要到各個 adapter 修改</li>
+<li>output format (輸出格式)<br>
+統一不同介面的 API 回傳格式<br>
+介面可按需求自行調整，主要是為了讓每支 API 有共通的操作介面</li>
+<li>HTTP request encapsulation (封裝)<br>
+封裝後可以隱藏實作細節，並重複使用</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Design-Pattern/" rel="tag"># Design Pattern</a>
+          
+            <a href="/tags/Refactor/" rel="tag"># Refactor</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/25/用-Python-打造自己的-Telegram-Bot/" rel="next" title="用 Python 打造自己的 Telegram Bot!">
+                <i class="fa fa-chevron-left"></i> 用 Python 打造自己的 Telegram Bot!
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -336,6 +467,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -356,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -435,6 +589,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Refactor 之路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方api封裝-third-party-api-encapsulation"><span class="nav-number">1.0.1.</span> <span class="nav-text">¶第三方API封裝 Third Party API Encapsulation</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -588,6 +758,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -605,6 +779,18 @@
       <script id="dsq-count-scr" src="https://oscar-tech-blog.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://oscarada87.github.io/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/';
+          this.page.identifier = '2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/';
+          this.page.title = '第三方API封裝 Third Party API Encapsulation';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://oscar-tech-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

@@ -271,6 +271,183 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Oscar Chiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Oscar's Tech Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/" itemprop="url">第三方API封裝 Third Party API Encapsulation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-11-22T01:29:55+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Design-Pattern/" itemprop="url" rel="index">
+                    <span itemprop="name">Design Pattern</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Design-Pattern/Refactor/" itemprop="url" rel="index">
+                    <span itemprop="name">Refactor</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/22/第三方API封裝-Third-Party-API-Encapsulation/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1>Refactor 之路</h1>
+<p>此系列文章是為了記錄 Refactor 公司遺留程式碼，一方面以後可以回過頭來檢討，一方面可以讓更多人一起討論。<br>
+主要會寫一些 design choice 以及架構設計的 UML 圖。</p>
+<h3 id="第三方api封裝-third-party-api-encapsulation"><a class="header-anchor" href="#第三方api封裝-third-party-api-encapsulation">¶</a>第三方API封裝 Third Party API Encapsulation</h3>
+<p><img src="https://user-images.githubusercontent.com/20165488/69312439-e6b5e080-0c69-11ea-9a6a-23f82aac7c3c.png" alt="Service Diagram"></p>
+<p>Service 主要負責三件事</p>
+<ul>
+<li>input validation (輸入驗證)<br>
+validation 寫在 service 的好處是，如果未來 validation 有更動，就不需要到各個 adapter 修改</li>
+<li>output format (輸出格式)<br>
+統一不同介面的 API 回傳格式<br>
+介面可按需求自行調整，主要是為了讓每支 API 有共通的操作介面</li>
+<li>HTTP request encapsulation (封裝)<br>
+封裝後可以隱藏實作細節，並重複使用</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2019/05/25/用-Python-打造自己的-Telegram-Bot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -628,7 +805,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -639,7 +816,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -650,7 +827,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
