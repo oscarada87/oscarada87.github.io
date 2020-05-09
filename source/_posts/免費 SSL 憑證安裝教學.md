@@ -4,8 +4,8 @@ tags:
 - SSL
 - HTTPS
 categories:
-- SSL
 - 隨筆分享
+- SSL
 ---
 
 # 免費 SSL 憑證申請
