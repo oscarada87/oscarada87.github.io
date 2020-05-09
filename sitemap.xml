@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://oscarada87.github.io/about/index.html</loc>
+    
+    <lastmod>2020-05-09T05:23:21.921Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://oscarada87.github.io/2020/05/09/%E5%85%8D%E8%B2%BB%20SSL%20%E6%86%91%E8%AD%89%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/</loc>
     
     <lastmod>2020-05-09T05:06:55.921Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://oscarada87.github.io/2019/05/24/Design-Patterns-Open-Closed-Principle/</loc>
     
     <lastmod>2019-05-25T03:58:08.343Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://oscarada87.github.io/about/index.html</loc>
-    
-    <lastmod>2019-05-24T17:48:10.938Z</lastmod>
     
   </url>
   
