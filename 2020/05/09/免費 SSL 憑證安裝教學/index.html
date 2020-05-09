@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Oscar">
+  <meta name="keywords" content="SSL,HTTPS,">
 
 
 
@@ -79,16 +79,21 @@
 
 
 
-<meta name="description" content="菜鳥工程師的走跳人生">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Oscar&#39;s Tech Blog">
-<meta property="og:url" content="https://oscarada87.github.io/archives/2019/12/index.html">
+<meta name="description" content="免費 SSL 憑證申請 Let’s Encrypt 是一個可以免費申請 SSL 憑證的機構 最簡單的做法是透過 Certbot 來替你的網站安裝憑證    ¶以下範例用的是 Ubuntu 16.04 + Nginx  首先要先 SSH 進到你的 server 並擁有 root 權限 下載 Certbot 資源    12345sudo apt-get updatesudo apt-get inst">
+<meta name="keywords" content="SSL,HTTPS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="免費 SSL 憑證申請">
+<meta property="og:url" content="https://oscarada87.github.io/2020/05/09/免費 SSL 憑證安裝教學/index.html">
 <meta property="og:site_name" content="Oscar&#39;s Tech Blog">
-<meta property="og:description" content="菜鳥工程師的走跳人生">
+<meta property="og:description" content="免費 SSL 憑證申請 Let’s Encrypt 是一個可以免費申請 SSL 憑證的機構 最簡單的做法是透過 Certbot 來替你的網站安裝憑證    ¶以下範例用的是 Ubuntu 16.04 + Nginx  首先要先 SSH 進到你的 server 並擁有 root 權限 下載 Certbot 資源    12345sudo apt-get updatesudo apt-get inst">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://hackmd.io/_uploads/SJCA2DMcL.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/HyqyTPfqU.png">
+<meta property="og:updated_time" content="2020-05-09T05:06:55.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oscar&#39;s Tech Blog">
-<meta name="twitter:description" content="菜鳥工程師的走跳人生">
+<meta name="twitter:title" content="免費 SSL 憑證申請">
+<meta name="twitter:description" content="免費 SSL 憑證申請 Let’s Encrypt 是一個可以免費申請 SSL 憑證的機構 最簡單的做法是透過 Certbot 來替你的網站安裝憑證    ¶以下範例用的是 Ubuntu 16.04 + Nginx  首先要先 SSH 進到你的 server 並擁有 root 權限 下載 Certbot 資源    12345sudo apt-get updatesudo apt-get inst">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/SJCA2DMcL.png">
 
 
 
@@ -118,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://oscarada87.github.io/archives/2019/12/">
+  <link rel="canonical" href="https://oscarada87.github.io/2020/05/09/免費 SSL 憑證安裝教學/">
 
 
 
 
 
-  <title>文章 | Oscar's Tech Blog</title>
+  <title>免費 SSL 憑證申請 | Oscar's Tech Blog</title>
   
 
 
@@ -152,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -256,72 +261,225 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共計 5 篇文章。 繼續努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2020/05/09/免費 SSL 憑證安裝教學/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Oscar Chiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Oscar's Tech Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/12/11/Ruby Tips/" itemprop="url">
-              
-                <span itemprop="name">Ruby 小知識 Ruby Tips</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">免費 SSL 憑證申請</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-12-11T14:26:55+08:00" content="2019-12-11">
-          12-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-05-09T13:02:20+08:00">
+                2020-05-09
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SSL/" itemprop="url" rel="index">
+                    <span itemprop="name">SSL</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SSL/隨筆分享/" itemprop="url" rel="index">
+                    <span itemprop="name">隨筆分享</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/05/09/免費 SSL 憑證安裝教學/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/09/免費 SSL 憑證安裝教學/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h1>免費 SSL 憑證申請</h1>
+<p><a href="https://letsencrypt.org/zh-tw/" target="_blank" rel="noopener">Let’s Encrypt</a> 是一個可以免費申請 SSL 憑證的機構<br>
+最簡單的做法是透過 <a href="https://certbot.eff.org/" target="_blank" rel="noopener">Certbot</a> 來替你的網站安裝憑證<br>
+<img src="https://hackmd.io/_uploads/SJCA2DMcL.png" alt><br>
+<img src="https://hackmd.io/_uploads/HyqyTPfqU.png" alt></p>
+<hr>
+<h3 id="以下範例用的是-ubuntu-16-04-nginx"><a class="header-anchor" href="#以下範例用的是-ubuntu-16-04-nginx">¶</a>以下範例用的是 Ubuntu 16.04 + Nginx</h3>
+<ol>
+<li>首先要先 SSH 進到你的 server 並擁有 root 權限</li>
+<li>下載 Certbot 資源</li>
+</ol>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install software-properties-common</span><br><span class="line">sudo add-apt-repository universe</span><br><span class="line">sudo add-apt-repository ppa:certbot/certbot</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>安裝 Certbot</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install certbot python3-certbot-nginx</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>執行</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo certbot --nginx</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>測試更新 bash script</li>
+</ol>
+<blockquote>
+<p>因為 Let’s Encrypt 發行的憑證 90 天後就會過期，因此每1個半月就需要更新一次，而 Certbot 會幫你安裝一個自動更新的 bash script<br>
+通常安裝在其中一個這邊的位置</p>
+</blockquote>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/crontab/</span><br><span class="line">/etc/cron.*/*</span><br><span class="line">systemctl list-timers</span><br></pre></td></tr></table></figure>
+<p>檢查更新程式</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo certbot renew --dry-run</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>驗證 SSL 安裝成功<br>
+可以在 <a href="https://www.sslshopper.com/ssl-checker.html" target="_blank" rel="noopener">SSL checker</a> 檢查有沒有安裝成功</li>
+</ol>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SSL/" rel="tag"># SSL</a>
+          
+            <a href="/tags/HTTPS/" rel="tag"># HTTPS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/11/Ruby Tips/" rel="next" title="Ruby 小知識 Ruby Tips">
+                <i class="fa fa-chevron-left"></i> Ruby 小知識 Ruby Tips
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -329,6 +487,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -349,8 +521,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -428,6 +609,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">免費 SSL 憑證申請</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#以下範例用的是-ubuntu-16-04-nginx"><span class="nav-number">1.0.1.</span> <span class="nav-text">¶以下範例用的是 Ubuntu 16.04 + Nginx</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -581,6 +778,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -598,6 +799,18 @@
       <script id="dsq-count-scr" src="https://oscar-tech-blog.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://oscarada87.github.io/2020/05/09/免費 SSL 憑證安裝教學/';
+          this.page.identifier = '2020/05/09/免費 SSL 憑證安裝教學/';
+          this.page.title = '免費 SSL 憑證申請';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://oscar-tech-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
