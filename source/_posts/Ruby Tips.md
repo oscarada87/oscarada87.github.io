@@ -3,7 +3,8 @@ title: 'Ruby 小知識 Ruby Tips'
 date: 2019-12-11 14:26:55
 tags: 
 - Ruby
-- Tips
+categories:
+- 筆記
 ---
 
 以下紀錄以前使用 Ruby 查詢的一些小知識

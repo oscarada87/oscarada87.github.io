@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Oscar's Tech Blog
+title: 奧卡的部落格
 subtitle:
 description: 菜鳥工程師的走跳人生
 keywords:
 author: Oscar Chiang
-language: zh-tw
+language: zh-TW
 timezone: Asia/Taipei
 
 sitemap: 

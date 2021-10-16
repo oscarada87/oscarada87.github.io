@@ -4,9 +4,7 @@ date: 2020-10-24 18:05:10
 tags:
 - OOP
 - class diagram
-- 筆記
 categories:
-- OOP
 - 筆記
 ---
 ## 緣由

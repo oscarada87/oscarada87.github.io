@@ -2,9 +2,8 @@
 title: 免費 SSL 憑證申請
 tags:
 - SSL
-- HTTPS
 categories:
-- 隨筆分享
+- 筆記
 - SSL
 ---
 
