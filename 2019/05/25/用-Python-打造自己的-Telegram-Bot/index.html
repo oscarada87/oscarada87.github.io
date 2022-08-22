@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"oscarada87.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInLeft"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="¶Telegram Bot 教學 這邊我們使用 Python 3.6↑ 與 telepot進行示範 telepot 文件 ¶安裝 telepot 和 pprint 套件 123pip install telepotpip install telepot --upgrade  # 更新pip install pprint # 讓 print 出來的文字自動排版">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用 Python 打造自己的 Telegram Bot!">
+<meta property="og:url" content="https://oscarada87.github.io/2019/05/25/%E7%94%A8-Python-%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84-Telegram-Bot/index.html">
+<meta property="og:site_name" content="奧卡的部落格">
+<meta property="og:description" content="¶Telegram Bot 教學 這邊我們使用 Python 3.6↑ 與 telepot進行示範 telepot 文件 ¶安裝 telepot 和 pprint 套件 123pip install telepotpip install telepot --upgrade  # 更新pip install pprint # 讓 print 出來的文字自動排版">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i.imgur.com/HjRUO0m.png">
+<meta property="og:image" content="https://i.imgur.com/qvZzpcH.png">
+<meta property="og:image" content="https://i.imgur.com/kuRWgHq.png">
+<meta property="og:image" content="https://i.imgur.com/EKwBxSp.png">
+<meta property="og:image" content="https://i.imgur.com/4uBaUSh.png">
+<meta property="og:image" content="https://i.imgur.com/Xp1wwCh.png">
+<meta property="article:published_time" content="2019-05-25T03:53:10.000Z">
+<meta property="article:modified_time" content="2022-08-22T08:07:43.908Z">
+<meta property="article:author" content="Oscar Chiang">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Telegram Bot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/HjRUO0m.png">
+
+
+<link rel="canonical" href="https://oscarada87.github.io/2019/05/25/%E7%94%A8-Python-%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84-Telegram-Bot/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://oscarada87.github.io/2019/05/25/%E7%94%A8-Python-%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84-Telegram-Bot/","path":"2019/05/25/用-Python-打造自己的-Telegram-Bot/","title":"用 Python 打造自己的 Telegram Bot!"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>用 Python 打造自己的 Telegram Bot! | 奧卡的部落格</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXKNZMSY74"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-QXKNZMSY74","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">奧卡的部落格</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Telegram-Bot-%E6%95%99%E5%AD%B8"><span class="nav-number">1.</span> <span class="nav-text">Telegram Bot 教學</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-telepot-%E5%92%8C-pprint-%E5%A5%97%E4%BB%B6"><span class="nav-number">1.0.1.</span> <span class="nav-text">安裝 telepot 和 pprint 套件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E5%BE%97-telegram-bot-Token"><span class="nav-number">1.0.2.</span> <span class="nav-text">取得 telegram bot Token</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%AC%E8%A9%A6%E6%98%AF%E5%90%A6%E6%9C%89%E9%80%A3%E4%B8%8A%E8%87%AA%E5%B7%B1%E7%9A%84-bot"><span class="nav-number">1.0.3.</span> <span class="nav-text">測試是否有連上自己的 bot</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%9E-telegram-%E4%B8%8A%E6%8E%A5%E6%94%B6%E8%A8%8A%E6%81%AF"><span class="nav-number">1.0.4.</span> <span class="nav-text">從 telegram 上接收訊息</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%88%91%E6%AF%94%E8%BC%83%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84%E5%B1%AC%E6%80%A7"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">我比較常用到的屬性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8-bot-%E5%9B%9E%E8%A8%8A%E6%81%AF%E5%9C%A8-telegram-%E4%B8%8A"><span class="nav-number">1.0.5.</span> <span class="nav-text">用 bot 回訊息在 telegram 上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8-bot-%E5%9B%9E%E5%9C%96%E7%89%87%E5%9C%A8-telegram-%E4%B8%8A"><span class="nav-number">1.0.6.</span> <span class="nav-text">用 bot 回圖片在 telegram 上</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Oscar Chiang</p>
+  <div class="site-description" itemprop="description">菜鳥工程師的走跳人生</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/oscarada87" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;oscarada87" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:oscarada87@gmail.com" title="E-Mail → mailto:oscarada87@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2019/05/25/%E7%94%A8-Python-%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84-Telegram-Bot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Oscar Chiang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="奧卡的部落格">
+      <meta itemprop="description" content="菜鳥工程師的走跳人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="用 Python 打造自己的 Telegram Bot! | 奧卡的部落格">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          用 Python 打造自己的 Telegram Bot!
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-05-25 11:53:10" itemprop="dateCreated datePublished" datetime="2019-05-25T11:53:10+08:00">2019-05-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-08-22 16:07:43" itemprop="dateModified" datetime="2022-08-22T16:07:43+08:00">2022-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Telegram-Bot-教學"><a class="header-anchor" href="#Telegram-Bot-教學">¶</a>Telegram Bot 教學</h2>
+<p>這邊我們使用 Python 3.6↑ 與 telepot進行示範<br>
+<a target="_blank" rel="noopener" href="http://telepot.readthedocs.io/en/latest/">telepot 文件</a></p>
+<h4 id="安裝-telepot-和-pprint-套件"><a class="header-anchor" href="#安裝-telepot-和-pprint-套件">¶</a>安裝 telepot 和 pprint 套件</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install telepot</span><br><span class="line">pip install telepot --upgrade  # 更新</span><br><span class="line">pip install pprint # 讓 print 出來的文字自動排版</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h4 id="取得-telegram-bot-Token"><a class="header-anchor" href="#取得-telegram-bot-Token">¶</a>取得 telegram bot Token</h4>
+<p>跟 BotFather 對話輸入 /newbot<br>
+<img src="https://i.imgur.com/HjRUO0m.png" alt=""></p>
+<p>接著要輸入 <strong>名字</strong> (bot的顯示名稱) 和 <strong>username</strong> (bot的使用者ID)</p>
+<p>⚠️注意 username 必須是 bot 結尾</p>
+<p><img src="https://i.imgur.com/qvZzpcH.png" alt=""><br>
+接著 BotFather 會給你一組 Token (紅色遮掉的地方)</p>
+<h4 id="測試是否有連上自己的-bot"><a class="header-anchor" href="#測試是否有連上自己的-bot">¶</a>測試是否有連上自己的 bot</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> telepot</span><br><span class="line">bot = telepot.Bot(<span class="string">&#x27;***** PUT YOUR TOKEN HERE *****&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(bot.getMe())</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/kuRWgHq.png" alt=""></p>
+<p>執行結果應該能看到自己 bot 的 id, is_bot, name, username 🎉</p>
+<h4 id="從-telegram-上接收訊息"><a class="header-anchor" href="#從-telegram-上接收訊息">¶</a>從 telegram 上接收訊息</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> telepot</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> telepot.loop <span class="keyword">import</span> MessageLoop</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line">bot = telepot.Bot(<span class="string">&#x27;***** PUT YOUR TOKEN HERE *****&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle</span>(<span class="params">msg</span>):</span></span><br><span class="line">    pprint(msg)</span><br><span class="line"></span><br><span class="line">MessageLoop(bot, handle).run_as_thread()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;I&#x27;m listening...&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/EKwBxSp.png" alt=""></p>
+<p>一般發送出來的訊息會長這個 Json 格式 🎉</p>
+<p><img src="https://i.imgur.com/4uBaUSh.png" alt=""></p>
+<p>Inline Query 的訊息會長這個 Json 格式 🎉</p>
+<blockquote>
+<p>Inline Query 是指在 telegram 中以 @標記bot 輸入的文字而不送出<br>
+<img src="https://i.imgur.com/Xp1wwCh.png" alt=""></p>
+</blockquote>
+<h5 id="我比較常用到的屬性"><a class="header-anchor" href="#我比較常用到的屬性">¶</a>我比較常用到的屬性</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">屬性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">chat_id</td>
+<td style="text-align:left">每個房間都有一個聊天室 id，不管是私聊還是大群，這個屬性幾乎是必抓，因為這樣才能讓 bot 知道要回在哪個群組中。</td>
+</tr>
+<tr>
+<td style="text-align:left">from_username</td>
+<td style="text-align:left">用戶的 username，可以用在標記 user 上</td>
+</tr>
+<tr>
+<td style="text-align:left">from_id</td>
+<td style="text-align:left">用戶的 id，可以用在 inline 標記上</td>
+</tr>
+<tr>
+<td style="text-align:left">message_id</td>
+<td style="text-align:left">用戶訊息的 id，可以用在 reply 上</td>
+</tr>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">用戶 inline query 的 id，可以用在 reply 上</td>
+</tr>
+<tr>
+<td style="text-align:left">text</td>
+<td style="text-align:left">用戶的訊息內容</td>
+</tr>
+<tr>
+<td style="text-align:left">query</td>
+<td style="text-align:left">用戶的 inline query 內容</td>
+</tr>
+</tbody>
+</table>
+<h4 id="用-bot-回訊息在-telegram-上"><a class="header-anchor" href="#用-bot-回訊息在-telegram-上">¶</a>用 bot 回訊息在 telegram 上</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bot.sendMessage(chat_id, text, parse_mode=<span class="literal">None</span>, disable_web_page_preview=<span class="literal">None</span>, disable_notification=<span class="literal">None</span>, reply_to_message_id=<span class="literal">None</span>, reply_markup=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://core.telegram.org/bots/api#sendmessage">官方API文件</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> telepot</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> telepot.loop <span class="keyword">import</span> MessageLoop</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line">bot = telepot.Bot(<span class="string">&#x27;***** PUT YOUR TOKEN HERE *****&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle</span>(<span class="params">msg</span>):</span></span><br><span class="line">    pprint(msg)</span><br><span class="line">    chat_id = msg[<span class="string">&#x27;chat&#x27;</span>][<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">    from_id = msg[<span class="string">&#x27;from&#x27;</span>][<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">    text = msg[<span class="string">&#x27;text&#x27;</span>]</span><br><span class="line">    </span><br><span class="line">    bot.sendMessage(chat_id, text)</span><br><span class="line"></span><br><span class="line">MessageLoop(bot, handle).run_as_thread()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;I&#x27;m listening...&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<p>上面這段程式碼會讓 bot 當個鸚鵡，重複任何你打的字!</p>
+<h4 id="用-bot-回圖片在-telegram-上"><a class="header-anchor" href="#用-bot-回圖片在-telegram-上">¶</a>用 bot 回圖片在 telegram 上</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bot.sendPhoto(chat_id, photo, caption=<span class="literal">None</span>, parse_mode=<span class="literal">None</span>, disable_notification=<span class="literal">None</span>, reply_to_message_id=<span class="literal">None</span>, reply_markup=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://core.telegram.org/bots/api#sendphoto">官方API文件</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> telepot</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> telepot.loop <span class="keyword">import</span> MessageLoop</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line">bot = telepot.Bot(<span class="string">&#x27;***** PUT YOUR TOKEN HERE *****&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle</span>(<span class="params">msg</span>):</span></span><br><span class="line">    pprint(msg)</span><br><span class="line">    chat_id = msg[<span class="string">&#x27;chat&#x27;</span>][<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">    from_id = msg[<span class="string">&#x27;from&#x27;</span>][<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">    photo = <span class="string">&#x27;https://pic.pimg.tw/like9417/1504869777-564645577.jpg?v=1504869878&#x27;</span></span><br><span class="line">    </span><br><span class="line">    bot.sendPhoto(chat_id, photo)</span><br><span class="line"></span><br><span class="line">MessageLoop(bot, handle).run_as_thread()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;I&#x27;m listening...&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<p>上面這段程式碼會讓 bot 傳梗圖，你打任何字都會回你梗圖!</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Telegram-Bot/" rel="tag"># Telegram Bot</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/05/24/Design-Patterns-Open-Closed-Principle/" rel="prev" title="Design Patterns : Open-Closed Principle">
+                  <i class="fa fa-chevron-left"></i> Design Patterns : Open-Closed Principle
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/11/22/%E7%AC%AC%E4%B8%89%E6%96%B9API%E5%B0%81%E8%A3%9D-Third-Party-API-Encapsulation/" rel="next" title="第三方API封裝 Third Party API Encapsulation">
+                  第三方API封裝 Third Party API Encapsulation <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Oscar Chiang</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
