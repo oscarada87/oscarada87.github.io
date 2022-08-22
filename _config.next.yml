@@ -841,15 +841,15 @@ mermaid:
 # For more information: https://animate.style
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
     post_block: fadeIn
-    post_header: fadeInDown
+    # post_header: fadeInDown
     post_body: fadeInDown
-    coll_header: fadeInLeft
+    # coll_header: fadeInLeft
     # Only for Pisces | Gemini.
-    sidebar: fadeInLeft
+    sidebar: fadeInRight
 
 # Progress bar in the top during page loading.
 # For more information: https://github.com/CodeByZach/pace
