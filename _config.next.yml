@@ -19,11 +19,11 @@ minify: false
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  #head: source/_data/head.njk
-  #header: source/_data/header.njk
+  # head: source/_data/head.njk
+  header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
-  #postBodyEnd: source/_data/post-body-end.njk
+  # postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
   #bodyEnd: source/_data/body-end.njk
   #variable: source/_data/variables.styl
@@ -676,6 +676,14 @@ google_analytics:
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
+
+google_adsense:
+  enable: true
+  google_ad_client_id: pub-5633005436793766 # 請修改成自己的
+  enable_page_level_ads: true
+  ## siderbar_enable 這邊建立廣告後才會用到
+  siderbar_enable: true # 是否開啟側邊欄廣告
+  siderbar_data_ad_slot: 0000000 # 請輸入廣告 slot
 
 # Baidu Analytics
 # See: https://tongji.baidu.com
