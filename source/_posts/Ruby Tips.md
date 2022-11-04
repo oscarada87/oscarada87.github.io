@@ -4,7 +4,8 @@ date: 2019-12-11 14:26:55
 tags: 
 - Ruby
 categories:
-- 筆記
+- 後端
+- Ruby
 ---
 
 以下紀錄以前使用 Ruby 查詢的一些小知識

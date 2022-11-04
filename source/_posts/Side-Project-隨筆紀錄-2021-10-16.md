@@ -6,8 +6,7 @@ tags:
 - docker
 - postgresql
 categories:
-- side project
-- 筆記
+- 後端
 ---
 
 想趁著做 Side Project 的同時順便練習一下文筆，因此就有了這系列的文章，主要是紀錄踩過的坑。 

@@ -5,6 +5,7 @@ tags:
 - Design Pattern
 - OCP Principle
 categories:
+- 後端
 - Design Pattern
 ---
 ## Open-Closed Principle 開放-封閉法則

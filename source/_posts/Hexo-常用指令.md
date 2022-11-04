@@ -5,7 +5,7 @@ tags:
 - hexo
 - node js
 categories:
-- 筆記
+- 其他
 ---
 
 把一些常用的 hexo 指令記錄下來，以免每次都要重新查
