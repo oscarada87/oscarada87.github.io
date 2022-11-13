@@ -21,28 +21,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"oscarada87.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInRight"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="免費 SSL 憑證申請 Let’s Encrypt 是一個可以免費申請 SSL 憑證的機構 最簡單的做法是透過 Certbot 來替你的網站安裝憑證  ¶以下範例用的是 Ubuntu 16.04 + Nginx  首先要先 SSH 進到你的 server 並擁有 root 權限 下載 Certbot 資源    12345sudo apt-get updatesudo apt-get instal">
+    <meta name="description" content="還沒有看過上篇的朋友可以點擊此處閱讀 ¶給剛畢業或轉換跑道想投新創公司的人一些建議 這次面試幾乎所有公司走的流程都大同小異，基本上分成幾個部分，自我介紹、經歷分享、技術面試(純問問題 或 作業 或 白板題)、行為面試(團體面試 或 CEO 面試)、面試者提問。  自我介紹 可以事先準備 3~5 分鐘左右的自我介紹，內容可以包含簡述過去經歷、描述個人特質等等。個人特質的描述可以包含一些實例佐證，比如">
 <meta property="og:type" content="article">
-<meta property="og:title" content="免費 SSL 憑證申請">
-<meta property="og:url" content="https://oscarada87.github.io/2022/08/22/%E5%85%8D%E8%B2%BB%20SSL%20%E6%86%91%E8%AD%89%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/index.html">
+<meta property="og:title" content="2022 Ruby on Rails 後端面試經驗分享(下)">
+<meta property="og:url" content="https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/index.html">
 <meta property="og:site_name" content="奧卡的部落格">
-<meta property="og:description" content="免費 SSL 憑證申請 Let’s Encrypt 是一個可以免費申請 SSL 憑證的機構 最簡單的做法是透過 Certbot 來替你的網站安裝憑證  ¶以下範例用的是 Ubuntu 16.04 + Nginx  首先要先 SSH 進到你的 server 並擁有 root 權限 下載 Certbot 資源    12345sudo apt-get updatesudo apt-get instal">
+<meta property="og:description" content="還沒有看過上篇的朋友可以點擊此處閱讀 ¶給剛畢業或轉換跑道想投新創公司的人一些建議 這次面試幾乎所有公司走的流程都大同小異，基本上分成幾個部分，自我介紹、經歷分享、技術面試(純問問題 或 作業 或 白板題)、行為面試(團體面試 或 CEO 面試)、面試者提問。  自我介紹 可以事先準備 3~5 分鐘左右的自我介紹，內容可以包含簡述過去經歷、描述個人特質等等。個人特質的描述可以包含一些實例佐證，比如">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-08-22T08:07:43.908Z">
-<meta property="article:modified_time" content="2022-11-04T03:49:08.900Z">
+<meta property="article:published_time" content="2022-11-13T12:51:34.000Z">
+<meta property="article:modified_time" content="2022-11-13T13:03:18.705Z">
 <meta property="article:author" content="Oscar Chiang">
-<meta property="article:tag" content="SSL">
+<meta property="article:tag" content="面試">
+<meta property="article:tag" content="求職">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://oscarada87.github.io/2022/08/22/%E5%85%8D%E8%B2%BB%20SSL%20%E6%86%91%E8%AD%89%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/">
+<link rel="canonical" href="https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://oscarada87.github.io/2022/08/22/%E5%85%8D%E8%B2%BB%20SSL%20%E6%86%91%E8%AD%89%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/","path":"2022/08/22/免費 SSL 憑證安裝教學/","title":"免費 SSL 憑證申請"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/","path":"2022/11/13/2022-Ruby-on-Rails-後端面試經驗分享(下)/","title":"2022 Ruby on Rails 後端面試經驗分享(下)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>免費 SSL 憑證申請 | 奧卡的部落格</title>
+<title>2022 Ruby on Rails 後端面試經驗分享(下) | 奧卡的部落格</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXKNZMSY74"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-QXKNZMSY74","only_pageview":false}</script>
@@ -121,7 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">免費 SSL 憑證申請</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B%E7%AF%84%E4%BE%8B%E7%94%A8%E7%9A%84%E6%98%AF-Ubuntu-16-04-Nginx"><span class="nav-number">1.0.1.</span> <span class="nav-text">以下範例用的是 Ubuntu 16.04 + Nginx</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%A6%E5%89%9B%E7%95%A2%E6%A5%AD%E6%88%96%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E6%83%B3%E6%8A%95%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8%E7%9A%84%E4%BA%BA%E4%B8%80%E4%BA%9B%E5%BB%BA%E8%AD%B0"><span class="nav-number">1.</span> <span class="nav-text">給剛畢業或轉換跑道想投新創公司的人一些建議</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -192,7 +193,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2022/08/22/%E5%85%8D%E8%B2%BB%20SSL%20%E6%86%91%E8%AD%89%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/">
+    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -205,12 +206,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="免費 SSL 憑證申請 | 奧卡的部落格">
+      <meta itemprop="name" content="2022 Ruby on Rails 後端面試經驗分享(下) | 奧卡的部落格">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          免費 SSL 憑證申請
+          2022 Ruby on Rails 後端面試經驗分享(下)
         </h1>
 
         <div class="post-meta-container">
@@ -220,15 +221,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2022-08-22 16:07:43" itemprop="dateCreated datePublished" datetime="2022-08-22T16:07:43+08:00">2022-08-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-11-04 11:49:08" itemprop="dateModified" datetime="2022-11-04T11:49:08+08:00">2022-11-04</time>
+      <time title="創建時間：2022-11-13 20:51:34 / 修改時間：21:03:18" itemprop="dateCreated datePublished" datetime="2022-11-13T20:51:34+08:00">2022-11-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -236,7 +231,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index"><span itemprop="name">其他</span></a>
+          <a href="/categories/%E5%BE%8C%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">後端</span></a>
         </span>
     </span>
 
@@ -257,38 +252,37 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1>免費 SSL 憑證申請</h1>
-<p><a target="_blank" rel="noopener" href="https://letsencrypt.org/zh-tw/">Let’s Encrypt</a> 是一個可以免費申請 SSL 憑證的機構<br>
-最簡單的做法是透過 <a target="_blank" rel="noopener" href="https://certbot.eff.org/">Certbot</a> 來替你的網站安裝憑證</p>
-<hr>
-<h3 id="以下範例用的是-Ubuntu-16-04-Nginx"><a class="header-anchor" href="#以下範例用的是-Ubuntu-16-04-Nginx">¶</a>以下範例用的是 Ubuntu 16.04 + Nginx</h3>
-<ol>
-<li>首先要先 SSH 進到你的 server 並擁有 root 權限</li>
-<li>下載 Certbot 資源</li>
-</ol>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install software-properties-common</span><br><span class="line">sudo add-apt-repository universe</span><br><span class="line">sudo add-apt-repository ppa:certbot/certbot</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>安裝 Certbot</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install certbot python3-certbot-nginx</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>執行</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo certbot --nginx</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>測試更新 bash script</li>
-</ol>
-<blockquote>
-<p>因為 Let’s Encrypt 發行的憑證 90 天後就會過期，因此每1個半月就需要更新一次，而 Certbot 會幫你安裝一個自動更新的 bash script<br>
-通常安裝在其中一個這邊的位置</p>
-</blockquote>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/crontab/</span><br><span class="line">/etc/cron.*/*</span><br><span class="line">systemctl list-timers</span><br></pre></td></tr></table></figure>
-<p>檢查更新程式</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo certbot renew --dry-run</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li>驗證 SSL 安裝成功<br>
-可以在 <a target="_blank" rel="noopener" href="https://www.sslshopper.com/ssl-checker.html">SSL checker</a> 檢查有沒有安裝成功</li>
-</ol>
+        <p>還沒有看過上篇的朋友可以點擊<a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/" title="此處">此處</a>閱讀</p>
+<h2 id="給剛畢業或轉換跑道想投新創公司的人一些建議"><a class="header-anchor" href="#給剛畢業或轉換跑道想投新創公司的人一些建議">¶</a>給剛畢業或轉換跑道想投新創公司的人一些建議</h2>
+<p>這次面試幾乎所有公司走的流程都大同小異，基本上分成幾個部分，自我介紹、經歷分享、技術面試(純問問題 或 作業 或 白板題)、行為面試(團體面試 或 CEO 面試)、面試者提問。</p>
+<ul>
+<li>自我介紹<br>
+可以事先準備 3~5 分鐘左右的自我介紹，內容可以包含簡述過去經歷、描述個人特質等等。個人特質的描述可以包含一些實例佐證，比如喜歡嘗試新事物可以用興趣廣泛當作驗證等等。</li>
+<li>經歷分享<br>
+大部分面試過程中約有1/3時間會圍繞在過去的工作經驗或作品集，我這次面試有兩種型式會問到這方面，第一種是會問類似 你碰過最困難的問題是甚麼，第二種則是會挑履歷中面試官感興趣的部分提問，因此在履歷中盡量挑選有把握的經歷寫在上面，如果沒有工作經驗的話，可以放學校專案或 side project。side project 想不到做甚麼的話，可以用 line bot 當作題目(還可以省去寫前端的工)。</li>
+<li>技術面試<br>
+初階職位以資料庫設計和 Ruby on Rails 的基礎語法為主，中高階職位則以系統架構設計為主 (也是我的弱項 QQ)。我在準備的時候是利用 Ruby on Rails 建立新專案，熟悉整個專案建置過程與 Rails 的語法，另外有刷 50 題左右 easy~medium 的 leetcode。</li>
+<li>行為面試<br>
+這個階段我覺得最重要的就是誠實，不要編造虛假的故事，剩下就是看個人的人格特質有沒有符合公司文化。以下是我有印象被問過的行為面試問題
+<ul>
+<li>做過最困難或最有成就感的專案</li>
+<li>未來1個月有甚麼計畫</li>
+<li>有甚麼興趣嗎?</li>
+</ul>
+</li>
+<li>面試者題問<br>
+建議可以事前準備一些問題，以下提供一些我有問的問題
+<ul>
+<li>開發流程大致長甚麼樣子</li>
+<li>現在和預期的團隊規模</li>
+<li>公司未來3年的目標和願景</li>
+<li>產業現況和前景</li>
+<li>如果有幸加入貴公司，最初三個月會做甚麼事</li>
+</ul>
+</li>
+<li>其他事項<br>
+假設有順利拿到 offer 的話，企業主通常會希望在 1~2 周內可以拿到答覆，而整個面試流程大約會在2~3周內結束，因此可以盡量把想去的公司排在一起投履歷。</li>
+</ul>
 
     </div>
 
@@ -298,21 +292,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/SSL/" rel="tag"># SSL</a>
+              <a href="/tags/%E9%9D%A2%E8%A9%A6/" rel="tag"># 面試</a>
+              <a href="/tags/%E6%B1%82%E8%81%B7/" rel="tag"># 求職</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/10/17/Side-Project-%E9%9A%A8%E7%AD%86%E7%B4%80%E9%8C%84-2021-10-16/" rel="prev" title="Side Project 隨筆紀錄 2021-10-16">
-                  <i class="fa fa-chevron-left"></i> Side Project 隨筆紀錄 2021-10-16
+                <a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/" rel="prev" title="2022 Ruby on Rails 後端面試經驗分享(上)">
+                  <i class="fa fa-chevron-left"></i> 2022 Ruby on Rails 後端面試經驗分享(上)
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/" rel="next" title="2022 Ruby on Rails 後端面試經驗分享(上)">
-                  2022 Ruby on Rails 後端面試經驗分享(上) <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

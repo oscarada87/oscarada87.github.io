@@ -130,7 +130,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -141,7 +141,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -178,6 +178,262 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Oscar Chiang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="奧卡的部落格">
+      <meta itemprop="description" content="菜鳥工程師的走跳人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 奧卡的部落格">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/" class="post-title-link" itemprop="url">2022 Ruby on Rails 後端面試經驗分享(下)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2022-11-13 20:51:34 / 修改時間：21:03:18" itemprop="dateCreated datePublished" datetime="2022-11-13T20:51:34+08:00">2022-11-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BE%8C%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">後端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>還沒有看過上篇的朋友可以點擊<a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/" title="此處">此處</a>閱讀</p>
+<h2 id="給剛畢業或轉換跑道想投新創公司的人一些建議"><a class="header-anchor" href="#給剛畢業或轉換跑道想投新創公司的人一些建議">¶</a>給剛畢業或轉換跑道想投新創公司的人一些建議</h2>
+<p>這次面試幾乎所有公司走的流程都大同小異，基本上分成幾個部分，自我介紹、經歷分享、技術面試(純問問題 或 作業 或 白板題)、行為面試(團體面試 或 CEO 面試)、面試者提問。</p>
+<ul>
+<li>自我介紹<br>
+可以事先準備 3~5 分鐘左右的自我介紹，內容可以包含簡述過去經歷、描述個人特質等等。個人特質的描述可以包含一些實例佐證，比如喜歡嘗試新事物可以用興趣廣泛當作驗證等等。</li>
+<li>經歷分享<br>
+大部分面試過程中約有1/3時間會圍繞在過去的工作經驗或作品集，我這次面試有兩種型式會問到這方面，第一種是會問類似 你碰過最困難的問題是甚麼，第二種則是會挑履歷中面試官感興趣的部分提問，因此在履歷中盡量挑選有把握的經歷寫在上面，如果沒有工作經驗的話，可以放學校專案或 side project。side project 想不到做甚麼的話，可以用 line bot 當作題目(還可以省去寫前端的工)。</li>
+<li>技術面試<br>
+初階職位以資料庫設計和 Ruby on Rails 的基礎語法為主，中高階職位則以系統架構設計為主 (也是我的弱項 QQ)。我在準備的時候是利用 Ruby on Rails 建立新專案，熟悉整個專案建置過程與 Rails 的語法，另外有刷 50 題左右 easy~medium 的 leetcode。</li>
+<li>行為面試<br>
+這個階段我覺得最重要的就是誠實，不要編造虛假的故事，剩下就是看個人的人格特質有沒有符合公司文化。以下是我有印象被問過的行為面試問題
+<ul>
+<li>做過最困難或最有成就感的專案</li>
+<li>未來1個月有甚麼計畫</li>
+<li>有甚麼興趣嗎?</li>
+</ul>
+</li>
+<li>面試者題問<br>
+建議可以事前準備一些問題，以下提供一些我有問的問題
+<ul>
+<li>開發流程大致長甚麼樣子</li>
+<li>現在和預期的團隊規模</li>
+<li>公司未來3年的目標和願景</li>
+<li>產業現況和前景</li>
+<li>如果有幸加入貴公司，最初三個月會做甚麼事</li>
+</ul>
+</li>
+<li>其他事項<br>
+假設有順利拿到 offer 的話，企業主通常會希望在 1~2 周內可以拿到答覆，而整個面試流程大約會在2~3周內結束，因此可以盡量把想去的公司排在一起投履歷。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Oscar Chiang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="奧卡的部落格">
+      <meta itemprop="description" content="菜鳥工程師的走跳人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 奧卡的部落格">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/" class="post-title-link" itemprop="url">2022 Ruby on Rails 後端面試經驗分享(上)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2022-11-13 20:51:34 / 修改時間：21:03:30" itemprop="dateCreated datePublished" datetime="2022-11-13T20:51:34+08:00">2022-11-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BE%8C%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">後端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="個人背景介紹"><a class="header-anchor" href="#個人背景介紹">¶</a>個人背景介紹</h2>
+<p>畢業於國立臺北科技大學電資學士班，在新創公司實習+全職經驗大約2年左右，工作內容以後端為主，除此之外前端、AWS、開發流程制定等也都有碰過。</p>
+<p>主要語言使用 Ruby on Rails，個人小專案則是使用 Python。</p>
+<p>LeetCode 大約刷了 50 題，難度介於 easy ~ medium 之間。</p>
+<p>投遞時間是在 2021年年底~2022年年初，為疫情最嚴重的時候，因此很多面試都改採用線上視訊面試。</p>
+<h2 id="投遞大綱"><a class="header-anchor" href="#投遞大綱">¶</a>投遞大綱</h2>
+<p>此次目標職位是 初階~中階後端工程師。</p>
+<ul>
+<li>順立智慧 - 104 投遞, 婉拒二面</li>
+<li>五倍紅寶石 - CakeResume 投遞, offer get</li>
+<li>GoSky AI - CakeResume 投遞, offer get</li>
+<li>MaiCoin - 個人投遞, 一面後感謝信</li>
+<li>車麻吉 - 個人投遞, 二面後感謝信</li>
+<li>NexTrek 匯雲數位 - hunter 投遞, offer get</li>
+<li>SHOPLINE 商線科技 - CakeResume 投遞, 回電後婉拒</li>
+</ul>
+<h2 id="順立智慧"><a class="header-anchor" href="#順立智慧">¶</a>順立智慧</h2>
+<p>公司在內湖(西湖捷運站附近)，非常難停車，如果是開車或騎車去的朋友建議可以早點到。</p>
+<p>一面是實體面試，一開始就是基本的自我介紹，接著大約花了1/3的時間問履歷上一些過往經驗。</p>
+<p>1/3的時間是技術相關問題，有印象的題目是</p>
+<ul>
+<li>rails 中 join 和 includes 的差別</li>
+<li>費布納西數列</li>
+<li>SQL 基本語法，像是 select 與 left join</li>
+</ul>
+<p>面試的房間有白板，會直接在上面答題，如果遇到不會的題目也可以當場查詢資料。</p>
+<p>剩下時間則是介紹公司業務與部門職責。</p>
+<p>大約 3 天後收到二面邀約，但因為已經有其他 offer，因此婉拒二面。</p>
+<h2 id="五倍紅寶石"><a class="header-anchor" href="#五倍紅寶石">¶</a>五倍紅寶石</h2>
+<p>在投遞履歷前有一項<a target="_blank" rel="noopener" href="https://github.com/5xRuby/5xtraining/blob/master/backend.md">作業</a>，作業完成後透過 cake resume 投遞履歷，大約 1 天後收到實體面試邀請。</p>
+<p>一面大約2小時，前半部分主要是針對作業的 code 做討論，有點像是 code review 的感覺，會問你為甚麼這邊要這樣寫，有沒有更好的寫法之類的。接著是聊我過去的經歷跟有沒有問題想問他們的。</p>
+<p>作業本身並不難(我花最多時間的反而是在前端QAQ)，可以在面試前自己對自己 code review 一次。</p>
+<p>面試完後直接 offer get。</p>
+<h2 id="GoSky-AI"><a class="header-anchor" href="#GoSky-AI">¶</a>GoSky AI</h2>
+<p>透過 teamdoor 投遞履歷後，大約3天後收到線上面試邀請</p>
+<p>一面為技術面試，由兩名後端一同面試，主要內容為 Ruby on Rails 基礎語法，有考議題白板題是要當場設計設計一個優惠券的 schema 與相關功能。面試完後大約 2 天收到第二次實體面試邀約。</p>
+<p>二面為團體面試，由產品團隊各職能派一位代表進行(包含前端、後端、設計師、PM)，主要問行為相關的問題，看面試者的個人特質是否與團隊文化和公司文化相符。</p>
+<p>2天後收到 offer get。</p>
+<h2 id="MaiCoin"><a class="header-anchor" href="#MaiCoin">¶</a>MaiCoin</h2>
+<p>透過 email 直接投遞履歷，大概 3 天後收到第一次視訊面試邀請。</p>
+<p>前半部分是聊過去的經歷，後面則是技術相關的問題，有一題白板題是數學相關的題目，請你寫一個 method 來達成。題目本身不難，但因為我太緊張，導致有些 edge case 沒有想到。</p>
+<p>2天後收到感謝信並推薦另一個職位，但因為有拿到 offer 而婉拒。</p>
+<h2 id="車麻吉"><a class="header-anchor" href="#車麻吉">¶</a>車麻吉</h2>
+<p>透過 email 直接投遞履歷，大約2天後收到作業與第一次視訊面試邀請。</p>
+<p>第一次面試主要是講解作業內容、招募流程、團隊目前狀況，接著有1周的時間可以寫作業，如果覺得時間不夠可以延期。作業總共有三題，1題跟資料庫設計有關，2題跟系統架構設計有關。</p>
+<p>繳交作業後，大約3天收到第二次實體面試邀請，二面除了會針對作業內容進行討論外，也有額外再問其他技術相關的問題，大多都跟資料庫有關，剩下就是過往工作經歷和公司環境介紹。</p>
+<p>2天後收到感謝信。</p>
+<h2 id="NexTrek-匯雲數位"><a class="header-anchor" href="#NexTrek-匯雲數位">¶</a>NexTrek 匯雲數位</h2>
+<p>透過獵頭投遞履歷，大約1、2天後邀約線上面試</p>
+<p>一面是與 CEO 視訊面試，與其說是面試倒比較像是聊天，前半段是聊我過去的經歷，後半段則是 CEO 介紹公司的業務，並讓我提問關於公司營運相關的問題。</p>
+<p>大約 2 天後收到二面邀請，二面是與 CTO 和 CEO 一同進行視訊面試，前半段一樣是聊過去的經驗(技術相關的比重比較多)，後半段則是 CTO 出一些技術相關的題目來問，比要有印象的題目為</p>
+<ul>
+<li>Block、Proc、Lambda 差別</li>
+<li>字串(String)跟符號(Symbol)的差別</li>
+</ul>
+<p>題目比較偏向 Ruby 的細節知識，平常沒特別深入研究的話還真回答不出來。最後我也問了許多關於開發團隊相關的問題，例如目前的開發流程、預計團隊的規模等等。</p>
+<p>2天後 offer get 。</p>
+<h2 id="SHOPLINE-商線科技"><a class="header-anchor" href="#SHOPLINE-商線科技">¶</a>SHOPLINE 商線科技</h2>
+<p>透過 cakeresume 投遞履歷，約 3 天後收到實體面試邀約。</p>
+<p>蠻怪的是我投 backend software developer，但感覺被當作應徵 senior 。</p>
+<p>面試一開始考了如何設計一個電商的系統架構，沒有特別準備加上經驗不足，所以答得不是很理想。後半部分一樣是聊我過去的實務經驗。</p>
+<p>大約 3 天後，接到人資電話說開發部門目前想找經驗更豐富的人，但 QA 部門對我有興趣，邀請我進行二次線上面試。</p>
+<p>二面 QA 部門就都沒有技術相關問題，前半部在聊我的經歷，後半則是說明該部門的職責及讓我提問。</p>
+<p>大約 1 周後有收到人資電話，詢問我對該部門有沒有興趣，我回覆目前職涯規劃想以開發為主(不確定算不算 offer get 😂)</p>
+<h2 id="幣託"><a class="header-anchor" href="#幣託">¶</a>幣託</h2>
+<p>年前投遞履歷，年後接到人資的電話，因為已經接受 offer ，因此婉拒。</p>
+<h2 id="總結"><a class="header-anchor" href="#總結">¶</a>總結</h2>
+<p>大部分的公司在收到履歷後1周內會邀請面試，而面試結束後短的話三天內就會收到回覆，最晚一周內會收到，這次面試很幸運地沒有遇到無聲卡。</p>
+<p>下篇是關於面試的一些心得建議，可以點擊還沒有看過上篇的朋友可以點擊<a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/" title="此處">此處</a>閱讀</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

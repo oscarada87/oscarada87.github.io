@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"oscarada87.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInRight"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="¶個人背景介紹 畢業於國立臺北科技大學電資學士班，在新創公司實習+全職經驗大約2年左右，工作內容以後端為主，除此之外前端、AWS、開發流程制定等也都有碰過。 主要語言使用 Ruby on Rails，個人小專案則是使用 Python。 LeetCode 大約刷了 50 題，難度介於 easy ~ medium 之間。 投遞時間是在 2021年年底~2022年年初，為疫情最嚴重的時候，因此很多面試都">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2022 Ruby on Rails 後端面試經驗分享(上)">
+<meta property="og:url" content="https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/index.html">
+<meta property="og:site_name" content="奧卡的部落格">
+<meta property="og:description" content="¶個人背景介紹 畢業於國立臺北科技大學電資學士班，在新創公司實習+全職經驗大約2年左右，工作內容以後端為主，除此之外前端、AWS、開發流程制定等也都有碰過。 主要語言使用 Ruby on Rails，個人小專案則是使用 Python。 LeetCode 大約刷了 50 題，難度介於 easy ~ medium 之間。 投遞時間是在 2021年年底~2022年年初，為疫情最嚴重的時候，因此很多面試都">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-11-13T12:51:34.000Z">
+<meta property="article:modified_time" content="2022-11-13T13:03:30.718Z">
+<meta property="article:author" content="Oscar Chiang">
+<meta property="article:tag" content="面試">
+<meta property="article:tag" content="求職">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/","path":"2022/11/13/2022-Ruby-on-Rails-後端面試經驗分享(上)/","title":"2022 Ruby on Rails 後端面試經驗分享(上)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2022 Ruby on Rails 後端面試經驗分享(上) | 奧卡的部落格</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXKNZMSY74"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-QXKNZMSY74","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5633005436793766"
+     crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">奧卡的部落格</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%8B%E4%BA%BA%E8%83%8C%E6%99%AF%E4%BB%8B%E7%B4%B9"><span class="nav-number">1.</span> <span class="nav-text">個人背景介紹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%95%E9%81%9E%E5%A4%A7%E7%B6%B1"><span class="nav-number">2.</span> <span class="nav-text">投遞大綱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A0%86%E7%AB%8B%E6%99%BA%E6%85%A7"><span class="nav-number">3.</span> <span class="nav-text">順立智慧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E5%80%8D%E7%B4%85%E5%AF%B6%E7%9F%B3"><span class="nav-number">4.</span> <span class="nav-text">五倍紅寶石</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GoSky-AI"><span class="nav-number">5.</span> <span class="nav-text">GoSky AI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MaiCoin"><span class="nav-number">6.</span> <span class="nav-text">MaiCoin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BB%8A%E9%BA%BB%E5%90%89"><span class="nav-number">7.</span> <span class="nav-text">車麻吉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexTrek-%E5%8C%AF%E9%9B%B2%E6%95%B8%E4%BD%8D"><span class="nav-number">8.</span> <span class="nav-text">NexTrek 匯雲數位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SHOPLINE-%E5%95%86%E7%B7%9A%E7%A7%91%E6%8A%80"><span class="nav-number">9.</span> <span class="nav-text">SHOPLINE 商線科技</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%A3%E8%A8%97"><span class="nav-number">10.</span> <span class="nav-text">幣託</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">11.</span> <span class="nav-text">總結</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Oscar Chiang</p>
+  <div class="site-description" itemprop="description">菜鳥工程師的走跳人生</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/oscarada87" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;oscarada87" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:oscarada87@gmail.com" title="E-Mail → mailto:oscarada87@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://oscarada87.github.io/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8A)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Oscar Chiang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="奧卡的部落格">
+      <meta itemprop="description" content="菜鳥工程師的走跳人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2022 Ruby on Rails 後端面試經驗分享(上) | 奧卡的部落格">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2022 Ruby on Rails 後端面試經驗分享(上)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2022-11-13 20:51:34 / 修改時間：21:03:30" itemprop="dateCreated datePublished" datetime="2022-11-13T20:51:34+08:00">2022-11-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BE%8C%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">後端</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="個人背景介紹"><a class="header-anchor" href="#個人背景介紹">¶</a>個人背景介紹</h2>
+<p>畢業於國立臺北科技大學電資學士班，在新創公司實習+全職經驗大約2年左右，工作內容以後端為主，除此之外前端、AWS、開發流程制定等也都有碰過。</p>
+<p>主要語言使用 Ruby on Rails，個人小專案則是使用 Python。</p>
+<p>LeetCode 大約刷了 50 題，難度介於 easy ~ medium 之間。</p>
+<p>投遞時間是在 2021年年底~2022年年初，為疫情最嚴重的時候，因此很多面試都改採用線上視訊面試。</p>
+<h2 id="投遞大綱"><a class="header-anchor" href="#投遞大綱">¶</a>投遞大綱</h2>
+<p>此次目標職位是 初階~中階後端工程師。</p>
+<ul>
+<li>順立智慧 - 104 投遞, 婉拒二面</li>
+<li>五倍紅寶石 - CakeResume 投遞, offer get</li>
+<li>GoSky AI - CakeResume 投遞, offer get</li>
+<li>MaiCoin - 個人投遞, 一面後感謝信</li>
+<li>車麻吉 - 個人投遞, 二面後感謝信</li>
+<li>NexTrek 匯雲數位 - hunter 投遞, offer get</li>
+<li>SHOPLINE 商線科技 - CakeResume 投遞, 回電後婉拒</li>
+</ul>
+<h2 id="順立智慧"><a class="header-anchor" href="#順立智慧">¶</a>順立智慧</h2>
+<p>公司在內湖(西湖捷運站附近)，非常難停車，如果是開車或騎車去的朋友建議可以早點到。</p>
+<p>一面是實體面試，一開始就是基本的自我介紹，接著大約花了1/3的時間問履歷上一些過往經驗。</p>
+<p>1/3的時間是技術相關問題，有印象的題目是</p>
+<ul>
+<li>rails 中 join 和 includes 的差別</li>
+<li>費布納西數列</li>
+<li>SQL 基本語法，像是 select 與 left join</li>
+</ul>
+<p>面試的房間有白板，會直接在上面答題，如果遇到不會的題目也可以當場查詢資料。</p>
+<p>剩下時間則是介紹公司業務與部門職責。</p>
+<p>大約 3 天後收到二面邀約，但因為已經有其他 offer，因此婉拒二面。</p>
+<h2 id="五倍紅寶石"><a class="header-anchor" href="#五倍紅寶石">¶</a>五倍紅寶石</h2>
+<p>在投遞履歷前有一項<a target="_blank" rel="noopener" href="https://github.com/5xRuby/5xtraining/blob/master/backend.md">作業</a>，作業完成後透過 cake resume 投遞履歷，大約 1 天後收到實體面試邀請。</p>
+<p>一面大約2小時，前半部分主要是針對作業的 code 做討論，有點像是 code review 的感覺，會問你為甚麼這邊要這樣寫，有沒有更好的寫法之類的。接著是聊我過去的經歷跟有沒有問題想問他們的。</p>
+<p>作業本身並不難(我花最多時間的反而是在前端QAQ)，可以在面試前自己對自己 code review 一次。</p>
+<p>面試完後直接 offer get。</p>
+<h2 id="GoSky-AI"><a class="header-anchor" href="#GoSky-AI">¶</a>GoSky AI</h2>
+<p>透過 teamdoor 投遞履歷後，大約3天後收到線上面試邀請</p>
+<p>一面為技術面試，由兩名後端一同面試，主要內容為 Ruby on Rails 基礎語法，有考議題白板題是要當場設計設計一個優惠券的 schema 與相關功能。面試完後大約 2 天收到第二次實體面試邀約。</p>
+<p>二面為團體面試，由產品團隊各職能派一位代表進行(包含前端、後端、設計師、PM)，主要問行為相關的問題，看面試者的個人特質是否與團隊文化和公司文化相符。</p>
+<p>2天後收到 offer get。</p>
+<h2 id="MaiCoin"><a class="header-anchor" href="#MaiCoin">¶</a>MaiCoin</h2>
+<p>透過 email 直接投遞履歷，大概 3 天後收到第一次視訊面試邀請。</p>
+<p>前半部分是聊過去的經歷，後面則是技術相關的問題，有一題白板題是數學相關的題目，請你寫一個 method 來達成。題目本身不難，但因為我太緊張，導致有些 edge case 沒有想到。</p>
+<p>2天後收到感謝信並推薦另一個職位，但因為有拿到 offer 而婉拒。</p>
+<h2 id="車麻吉"><a class="header-anchor" href="#車麻吉">¶</a>車麻吉</h2>
+<p>透過 email 直接投遞履歷，大約2天後收到作業與第一次視訊面試邀請。</p>
+<p>第一次面試主要是講解作業內容、招募流程、團隊目前狀況，接著有1周的時間可以寫作業，如果覺得時間不夠可以延期。作業總共有三題，1題跟資料庫設計有關，2題跟系統架構設計有關。</p>
+<p>繳交作業後，大約3天收到第二次實體面試邀請，二面除了會針對作業內容進行討論外，也有額外再問其他技術相關的問題，大多都跟資料庫有關，剩下就是過往工作經歷和公司環境介紹。</p>
+<p>2天後收到感謝信。</p>
+<h2 id="NexTrek-匯雲數位"><a class="header-anchor" href="#NexTrek-匯雲數位">¶</a>NexTrek 匯雲數位</h2>
+<p>透過獵頭投遞履歷，大約1、2天後邀約線上面試</p>
+<p>一面是與 CEO 視訊面試，與其說是面試倒比較像是聊天，前半段是聊我過去的經歷，後半段則是 CEO 介紹公司的業務，並讓我提問關於公司營運相關的問題。</p>
+<p>大約 2 天後收到二面邀請，二面是與 CTO 和 CEO 一同進行視訊面試，前半段一樣是聊過去的經驗(技術相關的比重比較多)，後半段則是 CTO 出一些技術相關的題目來問，比要有印象的題目為</p>
+<ul>
+<li>Block、Proc、Lambda 差別</li>
+<li>字串(String)跟符號(Symbol)的差別</li>
+</ul>
+<p>題目比較偏向 Ruby 的細節知識，平常沒特別深入研究的話還真回答不出來。最後我也問了許多關於開發團隊相關的問題，例如目前的開發流程、預計團隊的規模等等。</p>
+<p>2天後 offer get 。</p>
+<h2 id="SHOPLINE-商線科技"><a class="header-anchor" href="#SHOPLINE-商線科技">¶</a>SHOPLINE 商線科技</h2>
+<p>透過 cakeresume 投遞履歷，約 3 天後收到實體面試邀約。</p>
+<p>蠻怪的是我投 backend software developer，但感覺被當作應徵 senior 。</p>
+<p>面試一開始考了如何設計一個電商的系統架構，沒有特別準備加上經驗不足，所以答得不是很理想。後半部分一樣是聊我過去的實務經驗。</p>
+<p>大約 3 天後，接到人資電話說開發部門目前想找經驗更豐富的人，但 QA 部門對我有興趣，邀請我進行二次線上面試。</p>
+<p>二面 QA 部門就都沒有技術相關問題，前半部在聊我的經歷，後半則是說明該部門的職責及讓我提問。</p>
+<p>大約 1 周後有收到人資電話，詢問我對該部門有沒有興趣，我回覆目前職涯規劃想以開發為主(不確定算不算 offer get 😂)</p>
+<h2 id="幣託"><a class="header-anchor" href="#幣託">¶</a>幣託</h2>
+<p>年前投遞履歷，年後接到人資的電話，因為已經接受 offer ，因此婉拒。</p>
+<h2 id="總結"><a class="header-anchor" href="#總結">¶</a>總結</h2>
+<p>大部分的公司在收到履歷後1周內會邀請面試，而面試結束後短的話三天內就會收到回覆，最晚一周內會收到，這次面試很幸運地沒有遇到無聲卡。</p>
+<p>下篇是關於面試的一些心得建議，可以點擊還沒有看過上篇的朋友可以點擊<a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/" title="此處">此處</a>閱讀</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%9D%A2%E8%A9%A6/" rel="tag"># 面試</a>
+              <a href="/tags/%E6%B1%82%E8%81%B7/" rel="tag"># 求職</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/08/22/%E5%85%8D%E8%B2%BB%20SSL%20%E6%86%91%E8%AD%89%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/" rel="prev" title="免費 SSL 憑證申請">
+                  <i class="fa fa-chevron-left"></i> 免費 SSL 憑證申請
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/11/13/2022-Ruby-on-Rails-%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB(%E4%B8%8B)/" rel="next" title="2022 Ruby on Rails 後端面試經驗分享(下)">
+                  2022 Ruby on Rails 後端面試經驗分享(下) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Oscar Chiang</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
