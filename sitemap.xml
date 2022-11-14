@@ -130,20 +130,6 @@
   </url>
   
   <url>
-    <loc>https://oscarada87.github.io/tags/hexo/</loc>
-    <lastmod>2022-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://oscarada87.github.io/tags/node-js/</loc>
-    <lastmod>2022-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://oscarada87.github.io/tags/Design-Pattern/</loc>
     <lastmod>2022-11-14</lastmod>
     <changefreq>daily</changefreq>
@@ -152,6 +138,20 @@
   
   <url>
     <loc>https://oscarada87.github.io/tags/OCP-Principle/</loc>
+    <lastmod>2022-11-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://oscarada87.github.io/tags/hexo/</loc>
+    <lastmod>2022-11-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://oscarada87.github.io/tags/node-js/</loc>
     <lastmod>2022-11-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -186,13 +186,6 @@
   </url>
   
   <url>
-    <loc>https://oscarada87.github.io/tags/SSL/</loc>
-    <lastmod>2022-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://oscarada87.github.io/tags/Python/</loc>
     <lastmod>2022-11-14</lastmod>
     <changefreq>daily</changefreq>
@@ -201,6 +194,13 @@
   
   <url>
     <loc>https://oscarada87.github.io/tags/Telegram-Bot/</loc>
+    <lastmod>2022-11-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://oscarada87.github.io/tags/SSL/</loc>
     <lastmod>2022-11-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -244,13 +244,6 @@
   </url>
   
   <url>
-    <loc>https://oscarada87.github.io/categories/%E5%BE%8C%E7%AB%AF/Design-Pattern/</loc>
-    <lastmod>2022-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://oscarada87.github.io/categories/%E5%BE%8C%E7%AB%AF/Ruby/</loc>
     <lastmod>2022-11-14</lastmod>
     <changefreq>daily</changefreq>
@@ -259,6 +252,13 @@
   
   <url>
     <loc>https://oscarada87.github.io/categories/%E5%BE%8C%E7%AB%AF/Python/</loc>
+    <lastmod>2022-11-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://oscarada87.github.io/categories/%E5%BE%8C%E7%AB%AF/Design-Pattern/</loc>
     <lastmod>2022-11-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
