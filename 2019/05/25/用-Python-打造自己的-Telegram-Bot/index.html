@@ -160,10 +160,10 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/oscarada87" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;oscarada87" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <a href="https://github.com/oscarada87" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;oscarada87" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:oscarada87@gmail.com" title="E-Mail → mailto:oscarada87@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+        <a href="mailto:oscarada87@gmail.com" title="E-Mail → mailto:oscarada87@gmail.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
       </span>
   </div>
 
@@ -285,7 +285,7 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="Telegram-Bot-教學"><a class="header-anchor" href="#Telegram-Bot-教學">¶</a>Telegram Bot 教學</h2>
 <p>這邊我們使用 Python 3.6↑ 與 telepot進行示範<br>
-<a target="_blank" rel="noopener" href="http://telepot.readthedocs.io/en/latest/">telepot 文件</a></p>
+<a target="_blank" rel="noopener external nofollow noreferrer" href="http://telepot.readthedocs.io/en/latest/">telepot 文件</a></p>
 <h4 id="安裝-telepot-和-pprint-套件"><a class="header-anchor" href="#安裝-telepot-和-pprint-套件">¶</a>安裝 telepot 和 pprint 套件</h4>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install telepot</span><br><span class="line">pip install telepot --upgrade  # 更新</span><br><span class="line">pip install pprint # 讓 print 出來的文字自動排版</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
@@ -351,12 +351,12 @@
 </table>
 <h4 id="用-bot-回訊息在-telegram-上"><a class="header-anchor" href="#用-bot-回訊息在-telegram-上">¶</a>用 bot 回訊息在 telegram 上</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bot.sendMessage(chat_id, text, parse_mode=<span class="literal">None</span>, disable_web_page_preview=<span class="literal">None</span>, disable_notification=<span class="literal">None</span>, reply_to_message_id=<span class="literal">None</span>, reply_markup=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://core.telegram.org/bots/api#sendmessage">官方API文件</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://core.telegram.org/bots/api#sendmessage">官方API文件</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> telepot</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> telepot.loop <span class="keyword">import</span> MessageLoop</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line">bot = telepot.Bot(<span class="string">&#x27;***** PUT YOUR TOKEN HERE *****&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle</span>(<span class="params">msg</span>):</span></span><br><span class="line">    pprint(msg)</span><br><span class="line">    chat_id = msg[<span class="string">&#x27;chat&#x27;</span>][<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">    from_id = msg[<span class="string">&#x27;from&#x27;</span>][<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">    text = msg[<span class="string">&#x27;text&#x27;</span>]</span><br><span class="line">    </span><br><span class="line">    bot.sendMessage(chat_id, text)</span><br><span class="line"></span><br><span class="line">MessageLoop(bot, handle).run_as_thread()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;I&#x27;m listening...&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 <p>上面這段程式碼會讓 bot 當個鸚鵡，重複任何你打的字!</p>
 <h4 id="用-bot-回圖片在-telegram-上"><a class="header-anchor" href="#用-bot-回圖片在-telegram-上">¶</a>用 bot 回圖片在 telegram 上</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bot.sendPhoto(chat_id, photo, caption=<span class="literal">None</span>, parse_mode=<span class="literal">None</span>, disable_notification=<span class="literal">None</span>, reply_to_message_id=<span class="literal">None</span>, reply_markup=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://core.telegram.org/bots/api#sendphoto">官方API文件</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://core.telegram.org/bots/api#sendphoto">官方API文件</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> telepot</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> telepot.loop <span class="keyword">import</span> MessageLoop</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line">bot = telepot.Bot(<span class="string">&#x27;***** PUT YOUR TOKEN HERE *****&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle</span>(<span class="params">msg</span>):</span></span><br><span class="line">    pprint(msg)</span><br><span class="line">    chat_id = msg[<span class="string">&#x27;chat&#x27;</span>][<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">    from_id = msg[<span class="string">&#x27;from&#x27;</span>][<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">    photo = <span class="string">&#x27;https://pic.pimg.tw/like9417/1504869777-564645577.jpg?v=1504869878&#x27;</span></span><br><span class="line">    </span><br><span class="line">    bot.sendPhoto(chat_id, photo)</span><br><span class="line"></span><br><span class="line">MessageLoop(bot, handle).run_as_thread()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;I&#x27;m listening...&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 <p>上面這段程式碼會讓 bot 傳梗圖，你打任何字都會回你梗圖!</p>
 
@@ -433,7 +433,7 @@
       </span>
     </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> 強力驅動
   </div>
 
     </div>
